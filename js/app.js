@@ -68,6 +68,7 @@ const Home = {
         this.setupFilters();
         this.setupSearch();
         this.setupSidebarNav();
+        this.setupMobileNav();
         this.setupNotifications();
         this.applyFilters();
         this.renderSidebars(ARTICLES);
@@ -134,6 +135,27 @@ const Home = {
             viewMore.addEventListener('click', (e) => {
                 e.preventDefault();
                 this.renderCategoriesView();
+            });
+        }
+    },
+
+    setupMobileNav() {
+        const toggle = document.getElementById('mobileNavToggle');
+        const sidebar = document.querySelector('.sidebar-left');
+
+        if (toggle && sidebar) {
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                sidebar.classList.toggle('show');
+                toggle.textContent = sidebar.classList.contains('show') ? '✕' : '☰';
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', (e) => {
+                if (sidebar.classList.contains('show') && !sidebar.contains(e.target) && e.target !== toggle) {
+                    sidebar.classList.remove('show');
+                    toggle.textContent = '☰';
+                }
             });
         }
     },
