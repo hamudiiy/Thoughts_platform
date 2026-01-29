@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts | Saved Articles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="data/articles.js"></script>
+    <script src="js/bookmarks.js"></script>
+</head>
+
+<body>
+
+    <!-- Left Sidebar -->
+    <aside class="sidebar-left">
+        <div class="logo-area" onclick="location.href='index.html'" style="cursor: pointer;">
+            <div class="logo-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 7H13V13H11V7ZM11 15H13V17H11V15Z"
+                        fill="white" />
+                </svg>
+            </div>
+            <h1 class="logo-text">Thoughts</h1>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" class="nav-item"><span class="icon">🏠</span> Home</a>
+            <a href="saved.html" class="nav-item active"><span class="icon">🔖</span> Saved</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content-main">
+        <div class="feed-container">
+            <header class="feed-header">
+                <h1 style="font-size: 2rem; font-weight: 800;">Saved Articles</h1>
+            </header>
+
+            <div class="list-section" id="savedList" style="margin-top: 40px;">
+                <!-- Saved Articles will appear here -->
+                <div class="loader">Reading your library...</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/saved.js"></script>
+</body>
+
+</html>

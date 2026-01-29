@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts | Read Article</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="data/articles.js"></script>
+    <script src="js/bookmarks.js"></script>
+    <script src="js/follows.js"></script>
+    <script src="js/history.js"></script>
+    <script src="js/downloads.js"></script>
+</head>
+
+<body class="article-page">
+
+    <!-- Sticky Header -->
+    <header class="article-header">
+        <div class="article-header-container">
+            <nav class="nav-links">
+                <a href="index.html" class="nav-item"><span class="icon">🏠</span> Home</a>
+                <a href="saved.html" class="nav-item"><span class="icon">🔖</span> Saved</a>
+            </nav><button class="btn-share">Share</button>
+        </div>
+    </header>
+
+    <main class="article-main">
+        <article id="articleContent" class="article-wrapper">
+            <!-- Dynamic Content -->
+            <div class="loader">Loading article...</div>
+        </article>
+
+        <!-- Right Sidebar for suggestions -->
+        <aside class="sidebar-right">
+            <section class="picks-section">
+                <h2>More for You</h2>
+                <div id="suggestedArticles">
+                    <!-- Dynamic Suggestions -->
+                </div>
+            </section>
+        </aside>
+    </main>
+
+    <script src="js/article.js"></script>
+</body>
+
+</html>
